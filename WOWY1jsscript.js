@@ -7,6 +7,7 @@ $('td').hover(function() {
             detailsthis = "-";
         }
         $("#details").text("Details: " + detailsthis);
+        console.log(detailsthis);
     }
     $('td:nth-child(' + t + ')').addClass('highlighted');
 },
@@ -30,6 +31,10 @@ $('td').click(function() {
             $(this).addClass('selected');
         }
         $('td').removeClass('wasRemoved');
+        if($(this).hasClass('unabletoactivate') == true) {
+            $(this).removeClass('activated');
+            $(this).removeClass('selected');
+        }
     }
 });
 function buttonClicked() {
@@ -47,12 +52,21 @@ $("#submission").click(function() {
     $(".activated").children("div.name").text(name);
     $(".activated").children("div.details").text(details);
     $(".activated").css("background-color", colour);
-    if (colour == "black") {
-        $(".activated").css("color", "white");
+    $(".activated").css("color", "white")
+    if (colour == "cyan") {
+        $(".activated").css("color", "black");
+    }
+    if (colour == "yellow") {
+        $(".activated").css("color", "black");
+    }
+    if (colour == "white") {
+        $(".activated").css("color", "black");
     }
     document.getElementById("newEventForm").style.visibility
     $("#inputName").val("");
     $("#inputDetails").val("");
+    $(".activated").addClass("unabletoactivate");
+    $(".selected").removeClass("selected");
     $(".activated").removeClass("activated");
     document.getElementById("newEventForm").style.visibility = "hidden";
     document.getElementById("submission").style.visibility = "hidden";
