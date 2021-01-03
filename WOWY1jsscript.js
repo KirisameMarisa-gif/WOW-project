@@ -7,7 +7,6 @@ $('td').hover(function() {
             detailsthis = "-";
         }
         $("#details").text("Details: " + detailsthis);
-        console.log(detailsthis);
     }
     $('td:nth-child(' + t + ')').addClass('highlighted');
 },
