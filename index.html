@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="WOWY1cssstyling.css" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOW project</title>
+</head>
+<body>
+    <h1 style = 'color:white'> DIY Timetable! </h1>
+    <button id = "start" type = button onclick = "buttonClicked()">New timetable</button>
+    <button id = "addEvent" type = button onclick = "openForm()">New Event</button>
+    <div id = "background"></div>
+    <table id = “timetable” border = "1">
+        <tr>
+            <td></td>
+            <td>8-8.30am</td>
+            <td>8.30-9am</td>
+            <td>9-9.30am</td>
+            <td>9.30-10am</td>
+            <td>10-10.30am</td>
+            <td>10.30-11am</td>
+            <td>11-11.30am</td>
+            <td>11.30-12pm</td>
+            <td>12-12.30pm</td>
+            <td>12.30-1pm</td>
+            <td>1-1.30pm</td>
+            <td>1.30-2pm</td>
+            <td>2-2.30pm</td>
+            <td>2.30-3pm</td>
+            <td>3-3.30pm</td>
+            <td>3.30-4pm</td>
+            <td>4-4.30pm</td>
+            <td>4.30-5pm</td>
+            <td>5-5.30pm</td>
+            <td>5.30-6pm</td>
+            <td>6-6.30pm</td>
+            <td>6.30-7pm</td>
+            <td>7-7.30pm</td>
+            <td>7.30-8pm</td>
+        </tr> 
+        <tr>
+            <td>Monday</td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+            <td><div class = "name"></div><div class = "details" style = "display:none"></div></td>
+        </tr>
+    </table>
+    <br>
+    <div style = 'color:white'> Click on the time period of your event on the timetable to create it :)</div>
+    <form id = "newEventForm" method = "get" action = "">
+        Event Name: <input type = "text" name = "name" id = "inputName" value = "" required><br>
+        Details(optional):<input type = "text" name = "details" id = "inputDetails" value = ""><br>
+        Choose the Colour:
+        <input type="radio" id="red" name="colour" value="red">
+        <label for="red">Red</label>
+        <input type="radio" id="green" name="colour" value="green">
+        <label for="green">Green</label>
+        <input type="radio" id="blue" name="colour" value="blue">
+        <label for="blue">Blue</label>
+        <input type="radio" id="cyan" name="colour" value="cyan">
+        <label for="cyan">Cyan</label>
+        <input type="radio" id="magenta" name="colour" value="magenta">
+        <label for="magenta">Magenta</label>
+        <input type="radio" id="yellow" name="colour" value="yellow">
+        <label for="yellow">Yellow</label>
+        <input type="radio" id="black" name="colour" value="black">
+        <label for="black">Black</label>
+        <input type="radio" id="white" name="colour" value="white">
+        <label for="white">White</label> <br>
+    </form>
+    <button id = "submission"> submit </button>
+    <div id = "details"></div>
+    <script type="text/javascript" src="WOWY1jsscript.js"></script>
+</body>
+</html>
+
