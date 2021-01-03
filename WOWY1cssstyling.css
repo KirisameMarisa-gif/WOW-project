@@ -20,7 +20,7 @@ tr:hover {
     z-index:-2
 }
 td:hover {
-    background-color: 	#FFFF00;
+    background-color:   #FFFF00;
     transition-duration: 0.4s;
     color: black;
     z-index:-1
@@ -43,7 +43,7 @@ td {
     z-index:-2
 }
 .selected {
-    background-color: 	#FFFF00;
+    background-color:   #FFFF00;
     color: black;
 }
 #start{
@@ -84,5 +84,6 @@ td {
     visibility:hidden;
 }
 #details{
-    color:white;
+    Color:white;
+    font-size:150%;
 }
